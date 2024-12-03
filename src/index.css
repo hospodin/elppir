@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes float-0 {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+@keyframes float-1 {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(20px) rotate(-10deg); }
+}
+
+@keyframes float-2 {
+  0%, 100% { transform: translateX(0) rotate(0); }
+  50% { transform: translateX(20px) rotate(10deg); }
+}
+
+@keyframes float-3 {
+  0%, 100% { transform: translateX(0) rotate(0); }
+  50% { transform: translateX(-20px) rotate(-10deg); }
+}
