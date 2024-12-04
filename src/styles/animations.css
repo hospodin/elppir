@@ -1,0 +1,24 @@
+@layer components {
+  .blur-backdrop {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animated-element {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+
+  .glow {
+    box-shadow: 0 0 15px rgba(51, 163, 255, 0.3),
+                0 0 30px rgba(51, 163, 255, 0.2),
+                0 0 45px rgba(51, 163, 255, 0.1);
+  }
+
+  .geometric-shape {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+}

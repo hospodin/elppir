@@ -17,11 +17,11 @@ export function Tokenomics() {
               <ul className="space-y-4">
                 <li className="flex items-center space-x-2 text-elppir-400">
                   <Coins className="w-5 h-5 text-elppir-300" />
-                  <span>Total Supply: 1 Billion ELPPIR</span>
+                  <span>Total Supply: 1 Billion $PRX</span>
                 </li>
                 <li className="flex items-center space-x-2 text-elppir-400">
                   <Users className="w-5 h-5 text-elppir-300" />
-                  <span>Fair Launch: Everyone buys high</span>
+                  <span>PumpFun Fair Launch</span>
                 </li>
               </ul>
             </div>

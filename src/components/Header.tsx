@@ -13,20 +13,21 @@ export function Header() {
           />
           </div>
           
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#buy" className="hover:text-elppir-50 transition">Buy $ELPPIR</a>
+           <nav className="hidden md:flex items-center space-x-8"> 
+            {/* <a href="#hero" className="hover:text-elppir-50 transition">What</a>
+            <a href="#comparison" className="hover:text-elppir-50 transition">Why</a>
             <a href="#tokenomics" className="hover:text-elppir-50 transition">Tokenomics</a>
-            <a href="#roadmap" className="hover:text-elppir-50 transition">Roadmap</a>
-            <a href="#community" className="hover:text-elppir-50 transition">Community</a>
-            <button className="bg-elppir-200 hover:bg-elppir-300 px-6 py-2 rounded-full flex items-center space-x-2">
+            <a href="#community" className="hover:text-elppir-50 transition">Community</a>*/}
+            <a href="https://dexscreener.com/"> <button className="bg-elppir-200 hover:bg-elppir-300 px-6 py-2 rounded-full flex items-center space-x-2">     
               <span>Join Movement</span>
               <ArrowRight size={16} />
             </button>
+            </a>
           </nav>
           
-          <button className="md:hidden">
+         {/* <button className="md:hidden">
             <Menu size={24} />
-          </button>
+          </button> */}
         </div>
       </div>
     </header>

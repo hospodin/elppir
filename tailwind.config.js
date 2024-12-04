@@ -13,13 +13,7 @@ export default {
           500: 'rgb(0, 38, 102)',     // Dark Blue
           600: 'rgb(0, 17, 51)',      // Navy Blue
         }
-      },
-      animation: {
-        'float-0': 'float-0 6s ease-in-out infinite',
-        'float-1': 'float-1 8s ease-in-out infinite',
-        'float-2': 'float-2 7s ease-in-out infinite',
-        'float-3': 'float-3 9s ease-in-out infinite',
-      },
+      }
     },
   },
   plugins: [],

@@ -1,31 +1,35 @@
-import React from 'react';
-import { TrendingDown, Banknote, Building2, ArrowDownLeft } from 'lucide-react';
+import React, { useEffect, useRef } from 'react';
+import { useSpring, animated } from '@react-spring/web';
+import { ParticleField } from './ParticleField';
+import { GeometricShapes } from './GeometricShapes';
+import { MouseParallax } from './MouseParallax';
 
 export function AnimatedBackground() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  const [gradientProps] = useSpring(() => ({
+    from: { backgroundPosition: '0% 50%' },
+    to: { backgroundPosition: '100% 50%' },
+    config: { duration: 20000 },
+    loop: true,
+  }));
+
   return (
-    <div className="absolute inset-0 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#001133] via-[#003D99] to-[#0067E5] opacity-90" />
-      
-      {/* Floating meme elements */}
-      <div className="absolute inset-0">
-        {[...Array(12)].map((_, i) => (
-          <div
-            key={i}
-            className={`absolute animate-float-${i % 4} opacity-20`}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `float ${8 + Math.random() * 4}s infinite ease-in-out`,
-              animationDelay: `${Math.random() * 5}s`
-            }}
-          >
-            {i % 4 === 0 && <TrendingDown className="w-12 h-12 transform rotate-180 text-[#33A3FF]" />}
-            {i % 4 === 1 && <Banknote className="w-12 h-12 transform rotate-45 text-[#008CFF]" />}
-            {i % 4 === 2 && <Building2 className="w-12 h-12 transform -rotate-45 text-[#0067E5]" />}
-            {i % 4 === 3 && <ArrowDownLeft className="w-12 h-12 text-[#005BCC]" />}
-          </div>
-        ))}
+    <animated.div 
+      ref={containerRef}
+      className="absolute inset-0 overflow-hidden"
+      style={{
+        background: 'linear-gradient(-45deg, #001133, #003D99, #0067E5, #33A3FF)',
+        backgroundSize: '400% 400%',
+        ...gradientProps,
+      }}
+    >
+      <div className="absolute inset-0 backdrop-blur-[100px]">
+        <MouseParallax>
+          <GeometricShapes />
+          <ParticleField />
+        </MouseParallax>
       </div>
-    </div>
+    </animated.div>
   );
 }
