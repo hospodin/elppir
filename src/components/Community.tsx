@@ -10,8 +10,8 @@ export function Community() {
         <div className="max-w-4xl mx-auto">
           <div className="flex justify-center space-x-8">
             {[
-              { icon: <X className="w-6 h-6" />, label: "X", href: "#" },
-              { icon: <Send className="w-6 h-6" />, label: "Telegram", href: "#" }
+              { icon: <X className="w-6 h-6" />, label: "X", href: "https://x.com/ElppirOnSol" },
+              { icon: <Send className="w-6 h-6" />, label: "Telegram", href: "https://t.me/elppironsol" }
             ].map((social, index) => (
               <a
                 key={index}
